@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find oroca_manipulator_gazebo)/launch/bringup.launch"/>
+    <include file="$(find oroca_manipulator_control)/launch/bringup_controllers.launch"/>
+    <include file="$(find oroca_manipulator_moveit_config)/launch/move_group.launch"/>
+    <include file="$(find oroca_manipulator_moveit_config)/launch/moveit_rviz.launch">
+        <arg name="rviz_config" value="$(find oroca_manipulator_moveit_config)/launch/moveit.rviz"/>
+    </include>
+</launch>
